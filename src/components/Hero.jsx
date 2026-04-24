@@ -95,7 +95,7 @@ const Hero = () => {
         style={{ background: 'radial-gradient(circle, rgba(0,212,255,0.1) 0%, transparent 70%)', filter: 'blur(40px)' }}
       />
 
-      <div className="relative z-10 w-full flex flex-col items-center justify-center text-center px-6">
+      <div className="relative z-10 w-full flex flex-col items-center justify-center text-center px-6 pb-24">
         {/* Avatar card - now on top and centered */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -176,14 +176,12 @@ const Hero = () => {
           {/* Name */}
           <motion.h1
             variants={itemVariants}
-            className="font-bold leading-tight mb-4"
+            className="font-bold leading-tight tracking-tight mb-4"
             style={{
               fontFamily: 'Space Grotesk',
               fontSize: 'clamp(2.5rem, 8vw, 5rem)',
-              background: 'linear-gradient(135deg, #ffffff 30%, #a5a0ff 70%, #00d4ff 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
+              color: '#ffffff',
+              textShadow: '0 4px 30px rgba(255,255,255,0.2)'
             }}
           >
             MADHAVAN M
@@ -198,8 +196,8 @@ const Hero = () => {
             >
               {typedText}
               <span
-                className="inline-block w-0.5 h-5 ml-0.5 animate-pulse align-middle"
-                style={{ background: '#00d4ff', verticalAlign: 'middle' }}
+                className="inline-block w-[3px] h-[1em] ml-1 animate-pulse"
+                style={{ backgroundColor: '#00d4ff', verticalAlign: 'text-bottom' }}
               />
             </span>
           </motion.div>
@@ -212,12 +210,12 @@ const Hero = () => {
 
           <motion.p
             variants={itemVariants}
-            className="text-gray-400 text-base md:text-lg leading-relaxed mb-10"
+            className="text-gray-400 text-base md:text-lg leading-relaxed mb-10 max-w-2xl text-balance mx-auto"
           >
             Building real-world products at the intersection of{' '}
-            <span style={{ color: '#a5a0ff' }}>AI</span>,{' '}
-            <span style={{ color: '#00d4ff' }}>Computer Vision</span>, and{' '}
-            <span style={{ color: '#ff6584' }}>Full Stack Web</span> development.
+            <span className="font-semibold text-white">AI</span>,{' '}
+            <span className="font-semibold text-white">Computer Vision</span>, and{' '}
+            <span className="font-semibold text-white">Full Stack Web</span> development.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -247,9 +245,9 @@ const Hero = () => {
           {/* Social Links */}
           <motion.div variants={itemVariants} className="flex items-center justify-center gap-6">
             {[
-              { icon: GitFork, href: 'https://github.com/', label: 'GitHub' },
-              { icon: Globe, href: 'https://linkedin.com/', label: 'LinkedIn' },
-              { icon: Mail, href: 'mailto:madhavan@example.com', label: 'Email' },
+              { icon: GitFork, href: 'https://github.com/madhavan-012004', label: 'GitHub' },
+              { icon: Globe, href: 'https://linkedin.com/in/madhavan01', label: 'LinkedIn' },
+              { icon: Mail, href: 'mailto:madhavanm.0108@gmail.com', label: 'Email' },
             ].map(({ icon: Icon, href, label }) => (
               <motion.a
                 key={label}
@@ -274,7 +272,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 0.8 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500 cursor-pointer"
+        className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500 cursor-pointer z-20"
         onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
       >
         <span className="text-xs tracking-widest uppercase">Scroll</span>
