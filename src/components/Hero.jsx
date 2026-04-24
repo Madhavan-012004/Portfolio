@@ -2,7 +2,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, GitFork, Globe, Mail, Download, Sparkles, MapPin } from 'lucide-react';
-import resumePdf from '../assets/Madhavan Updated Resume.pdf';
 
 // Strings to cycle through in the typing animation
 const ROLES = [
@@ -232,7 +231,7 @@ const Hero = () => {
               Get in Touch
             </motion.a>
             <motion.a
-              href={resumePdf}
+              href="/Madhavan_Resume.pdf"
               download="Madhavan_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
