@@ -232,7 +232,9 @@ const Hero = () => {
             </motion.a>
             <motion.a
               href="/resume.pdf"
-              download
+              download="Madhavan_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-outline px-8"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
